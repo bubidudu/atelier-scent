@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@theme {
+  /* Warm paper / botanical palette */
+  --color-paper: #faf7f2;
+  --color-paper-deep: #f3ede4;
+  --color-ink: #23211d;
+  --color-ink-soft: #57524a;
+  --color-ink-faint: #8b8478;
+  --color-line: #e2dacd;
+  --color-line-strong: #cfc4b2;
+
+  --color-sand: #e9dfcd;
+  --color-clay: #d9c3ad;
+  --color-sage: #b8c2ab;
+  --color-mist: #cdd3d0;
+
+  --color-accent: #7c6a4f;
+  --color-accent-soft: #a3917a;
+
+  --font-serif: "Cormorant Garamond", "Songti TC", "Noto Serif TC", Georgia, serif;
+  --font-sans: "Inter", "PingFang HK", "Noto Sans TC", system-ui, sans-serif;
+
+  --radius-card: 2px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-feature-settings: "kern";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: var(--color-clay);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  .eyebrow {
+    font-size: 0.6875rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-ink-faint);
+  }
+
+  .rule {
+    border-color: var(--color-line);
+  }
+
+  /* Placeholder blocks for pending photography */
+  .media-placeholder {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-paper-deep);
+    background-image:
+      radial-gradient(
+        circle at 30% 25%,
+        color-mix(in srgb, var(--color-clay) 45%, transparent),
+        transparent 60%
+      ),
+      radial-gradient(
+        circle at 75% 70%,
+        color-mix(in srgb, var(--color-sage) 40%, transparent),
+        transparent 65%
+      );
+  }
+
+  .media-placeholder::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      -45deg,
+      transparent 0 8px,
+      color-mix(in srgb, var(--color-ink) 3%, transparent) 8px 9px
+    );
+    opacity: 0.6;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
