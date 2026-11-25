@@ -11,17 +11,19 @@ export function TeamSection() {
     <Section className="border-y border-line bg-paper-deep/40">
       <SectionHeading title={t(copy.about.teamTitle)} intro={t(copy.about.teamIntro)} />
 
-      <ul className="mt-10 grid gap-px border border-line bg-line sm:grid-cols-2">
+      <ul className="mt-12 grid gap-px border border-line bg-line sm:grid-cols-2">
         {copy.about.team.map((member) => (
-          <li key={member.enName} className="bg-paper p-7">
+          <li key={member.enName} className="bg-paper p-8">
             <div className="flex items-baseline gap-3">
-              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent-soft" />
-              <h3 className="font-display text-lg">{member.name}</h3>
+              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+              <h3 className="font-display text-[1.0625rem] uppercase tracking-[0.04em]">
+                {member.name}
+              </h3>
             </div>
-            <p className="mt-1.5 text-xs tracking-[0.1em] text-ink-faint uppercase">
+            <p className="mt-2.5 text-[0.625rem] uppercase tracking-[0.16em] text-ink-faint">
               {member.enName}
             </p>
-            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+            <p className="mt-4 text-[0.8125rem] leading-[1.9] text-ink-soft">
               {t(member.body)}
             </p>
           </li>

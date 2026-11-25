@@ -11,8 +11,11 @@ export function Section({
   id?: string;
 }) {
   return (
-    <section id={id} className={cn("px-5 py-20 sm:px-8 sm:py-28 lg:px-12", className)}>
-      <div className="mx-auto w-full max-w-[1180px]">{children}</div>
+    <section
+      id={id}
+      className={cn("px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28", className)}
+    >
+      <div className="mx-auto w-full max-w-[1240px]">{children}</div>
     </section>
   );
 }
@@ -39,11 +42,13 @@ export function SectionHeading({
       )}
     >
       {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
-      <h2 className="font-display mt-4 text-[2rem] leading-[1.15] sm:text-[2.75rem]">
+      <h2 className="font-display mt-5 text-[1.75rem] tracking-[-0.02em] uppercase sm:text-[2.25rem] lg:text-[2.75rem]">
         {title}
       </h2>
       {intro ? (
-        <p className="mt-5 text-[0.9375rem] leading-relaxed text-ink-soft">{intro}</p>
+        <p className="mt-6 max-w-xl text-[0.875rem] leading-[1.85] text-ink-soft">
+          {intro}
+        </p>
       ) : null}
     </div>
   );

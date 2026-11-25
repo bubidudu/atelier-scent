@@ -13,22 +13,25 @@ export function Hero() {
   const title = t(copy.hero.title).split("\n");
 
   return (
-    <section className="border-b border-line px-5 pt-16 pb-20 sm:px-8 sm:pt-24 sm:pb-28 lg:px-12">
-      <div className="mx-auto grid max-w-[1180px] items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+    <section className="border-b border-line px-5 pt-14 pb-16 sm:px-8 sm:pt-20 sm:pb-20 lg:px-12 lg:pt-24">
+      <div className="mx-auto grid max-w-[1240px] items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
         <div>
           <p className="eyebrow">{t(copy.hero.eyebrow)}</p>
-          <h1 className="font-display mt-6 text-[2.75rem] leading-[1.08] sm:text-[3.75rem] lg:text-[4.25rem]">
+          <h1 className="font-display mt-6 text-[2.25rem] leading-[1.1] tracking-[-0.03em] sm:text-[3rem] lg:text-[3.75rem]">
             {title.map((line) => (
               <span key={line} className="block">
                 {line}
               </span>
             ))}
           </h1>
-          <p className="mt-7 max-w-xl text-[0.9375rem] leading-relaxed text-ink-soft">
+
+          <div className="mt-8 h-px w-16 bg-ink" aria-hidden="true" />
+
+          <p className="mt-8 max-w-lg text-[0.875rem] leading-[1.9] text-ink-soft">
             {t(copy.hero.subtitle)}
           </p>
 
-          <div className="mt-9 flex flex-wrap gap-3">
+          <div className="mt-10 flex flex-wrap gap-3">
             <ButtonLink href="/products">{t(copy.hero.ctaPrimary)}</ButtonLink>
             <ButtonLink href="#community" variant="outline">
               {t(copy.hero.ctaSecondary)}
@@ -41,8 +44,8 @@ export function Hero() {
           <dl className="mt-14 grid max-w-md grid-cols-3 gap-6 border-t border-line pt-7">
             {copy.hero.heroStats.map((stat) => (
               <div key={stat.label.en}>
-                <dt className="font-display text-3xl leading-none">{stat.value}</dt>
-                <dd className="mt-2 text-[0.6875rem] leading-snug tracking-[0.1em] text-ink-faint uppercase">
+                <dt className="font-display text-[1.75rem] leading-none">{stat.value}</dt>
+                <dd className="mt-2.5 text-[0.625rem] leading-snug uppercase tracking-[0.16em] text-ink-faint">
                   {t(stat.label)}
                 </dd>
               </div>
@@ -58,9 +61,9 @@ export function Hero() {
             priority
             className="w-full border border-line"
           />
-          <div className="mt-4 hidden border border-line bg-paper-deep/50 p-5 sm:block">
+          <div className="mt-4 border border-line bg-paper-deep/50 p-5">
             <p className="eyebrow">{t(copy.brand.tagline)}</p>
-            <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+            <p className="mt-2.5 text-[0.75rem] leading-[1.8] text-ink-soft">
               {t(copy.hero.heroImageAlt)}
             </p>
           </div>

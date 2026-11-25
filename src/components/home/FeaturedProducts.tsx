@@ -27,18 +27,20 @@ export function FeaturedProducts() {
         intro={t(copy.featured.intro)}
       />
 
-      <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3 border-y border-line py-5">
+      <div className="mt-12 flex flex-wrap gap-x-10 gap-y-5 border-y border-line py-6">
         {productCategories.map((category) => (
-          <div key={category.id} className="max-w-[16rem]">
-            <p className="font-display text-base">{t(category.label)}</p>
-            <p className="mt-1 text-xs leading-relaxed text-ink-faint">
+          <div key={category.id} className="max-w-[15rem]">
+            <p className="text-[0.6875rem] font-medium uppercase tracking-[0.14em]">
+              {t(category.label)}
+            </p>
+            <p className="mt-1.5 text-[0.75rem] leading-[1.8] text-ink-faint">
               {t(category.tagline)}
             </p>
           </div>
         ))}
       </div>
 
-      <div className="mt-12 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-14 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
         {featured.map((product) => (
           <ProductCard key={product.id} product={product} onSelect={setActive} />
         ))}

@@ -26,11 +26,11 @@ export function ProductCard({
         className="w-full text-left"
         aria-label={`${t(product.name)} — ${t(copy.featured.details)}`}
       >
-        <div className="relative">
+        <div className="relative overflow-hidden">
           <Media
             imageKey={product.imageKey}
             locale={locale}
-            className="w-full transition-transform duration-500 group-hover:scale-[1.015]"
+            className="w-full transition-transform duration-700 ease-out group-hover:scale-[1.03]"
           />
           <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">
             {product.tags.slice(0, 2).map((tagId) => (
@@ -42,30 +42,36 @@ export function ProductCard({
         </div>
       </button>
 
-      <div className="mt-4 flex flex-1 flex-col">
+      <div className="mt-5 flex flex-1 flex-col">
         <p className="eyebrow">{category ? t(category.label) : product.category}</p>
-        <h3 className="font-display mt-2 text-xl leading-snug">{t(product.name)}</h3>
-        <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-ink-soft">
+        <h3 className="font-display mt-2.5 text-[1.0625rem] uppercase tracking-[0.04em]">
+          {t(product.name)}
+        </h3>
+        <p className="mt-3 line-clamp-3 text-[0.8125rem] leading-[1.85] text-ink-soft">
           {t(product.story)}
         </p>
 
-        <dl className="mt-4 space-y-1.5 text-xs text-ink-faint">
-          <div className="flex gap-2">
-            <dt className="w-16 shrink-0">{t(copy.featured.size)}</dt>
+        <dl className="mt-5 space-y-1.5 text-[0.6875rem] text-ink-faint">
+          <div className="flex gap-3">
+            <dt className="w-16 shrink-0 uppercase tracking-[0.12em]">
+              {t(copy.featured.size)}
+            </dt>
             <dd className="text-ink-soft">{product.size}</dd>
           </div>
-          <div className="flex gap-2">
-            <dt className="w-16 shrink-0">{t(copy.featured.price)}</dt>
+          <div className="flex gap-3">
+            <dt className="w-16 shrink-0 uppercase tracking-[0.12em]">
+              {t(copy.featured.price)}
+            </dt>
             <dd className="text-ink-soft">{product.price}</dd>
           </div>
         </dl>
 
-        <div className="mt-4 flex items-center justify-between gap-3 pt-1">
+        <div className="mt-5 flex items-center justify-between gap-3 border-t border-line pt-4">
           <Badge tone="outline">{t(copy.featured.status[product.status])}</Badge>
           <button
             type="button"
             onClick={() => onSelect(product)}
-            className="border-b border-ink-faint pb-0.5 text-xs tracking-[0.08em] text-ink-soft transition-colors hover:border-ink hover:text-ink"
+            className="border-b border-ink pb-0.5 text-[0.625rem] font-medium uppercase tracking-[0.16em] text-ink transition-colors hover:border-ink-faint hover:text-ink-soft"
           >
             {t(copy.featured.details)} →
           </button>

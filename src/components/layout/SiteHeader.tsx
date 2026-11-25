@@ -21,22 +21,24 @@ export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-paper/85 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-[1180px] items-center justify-between gap-4 px-5 sm:px-8 lg:px-12">
-        <Link href="/" className="group flex items-baseline gap-2.5">
-          <span className="font-display text-xl tracking-tight">Atelier Scent</span>
-          <span className="hidden text-[0.6875rem] tracking-[0.18em] text-ink-faint uppercase sm:inline">
+    <header className="sticky top-0 z-40 border-b border-line bg-paper/90 backdrop-blur-md">
+      <div className="mx-auto flex h-16 max-w-[1240px] items-center justify-between gap-6 px-5 sm:px-8 lg:px-12">
+        <Link href="/" className="flex items-baseline gap-3">
+          <span className="font-display text-[1.0625rem] uppercase tracking-[0.22em]">
+            Atelier Scent
+          </span>
+          <span className="hidden text-[0.625rem] uppercase tracking-[0.2em] text-ink-faint xl:inline">
             {t(copy.brand.tagline)}
           </span>
         </Link>
 
-        <div className="flex items-center gap-3">
-          <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary">
+        <div className="flex items-center gap-4">
+          <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary">
             {navLinks.map((link) => (
               <Link
                 key={link.key}
                 href={link.href}
-                className="text-[0.8125rem] text-ink-soft transition-colors hover:text-ink"
+                className="text-[0.6875rem] font-medium uppercase tracking-[0.16em] text-ink-soft transition-colors hover:text-ink"
               >
                 {t(copy.nav[link.key])}
               </Link>
@@ -50,13 +52,13 @@ export function SiteHeader() {
             onClick={() => setMenuOpen((open) => !open)}
             aria-expanded={menuOpen}
             aria-label={t(copy.nav.menu)}
-            className="flex h-9 w-9 items-center justify-center border border-line-strong text-ink-soft transition-colors hover:border-ink hover:text-ink lg:hidden"
+            className="flex h-8 w-8 items-center justify-center border border-line-strong text-ink transition-colors hover:border-ink lg:hidden"
           >
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
               {menuOpen ? (
-                <path d="M3.5 3.5l9 9M12.5 3.5l-9 9" stroke="currentColor" strokeWidth="1.2" />
+                <path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" strokeWidth="1.2" />
               ) : (
-                <path d="M2 4.5h12M2 8h12M2 11.5h12" stroke="currentColor" strokeWidth="1.2" />
+                <path d="M1.5 4h11M1.5 7h11M1.5 10h11" stroke="currentColor" strokeWidth="1.2" />
               )}
             </svg>
           </button>
@@ -65,22 +67,22 @@ export function SiteHeader() {
 
       <div
         className={cn(
-          "overflow-hidden border-line transition-[max-height] duration-300 lg:hidden",
-          menuOpen ? "max-h-96 border-t" : "max-h-0",
+          "overflow-hidden transition-[max-height] duration-300 lg:hidden",
+          menuOpen ? "max-h-96 border-t border-line" : "max-h-0",
         )}
       >
-        <nav className="space-y-1 px-5 py-4 sm:px-8" aria-label="Mobile">
+        <nav className="space-y-1 px-5 py-5 sm:px-8" aria-label="Mobile">
           {navLinks.map((link) => (
             <Link
               key={link.key}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="block py-2 text-sm text-ink-soft transition-colors hover:text-ink"
+              className="block py-2 text-[0.6875rem] font-medium uppercase tracking-[0.16em] text-ink-soft transition-colors hover:text-ink"
             >
               {t(copy.nav[link.key])}
             </Link>
           ))}
-          <div className="pt-3">
+          <div className="pt-4">
             <LanguageToggle />
           </div>
         </nav>

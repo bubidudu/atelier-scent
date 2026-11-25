@@ -15,7 +15,7 @@ export function FaqSection() {
     <Section>
       <SectionHeading title={t(copy.about.faqTitle)} />
 
-      <ul className="mt-10 border-t border-line">
+      <ul className="mt-12 border-t border-line">
         {faqs.map((faq) => {
           const isOpen = openId === faq.id;
           return (
@@ -24,9 +24,11 @@ export function FaqSection() {
                 type="button"
                 onClick={() => setOpenId(isOpen ? null : faq.id)}
                 aria-expanded={isOpen}
-                className="flex w-full items-start justify-between gap-6 py-5 text-left"
+                className="flex w-full items-start justify-between gap-8 py-6 text-left"
               >
-                <span className="font-display text-lg leading-snug">{t(faq.question)}</span>
+                <span className="font-display text-[1rem] uppercase tracking-[0.03em]">
+                  {t(faq.question)}
+                </span>
                 <span
                   aria-hidden="true"
                   className={cn(
@@ -44,7 +46,7 @@ export function FaqSection() {
                 )}
               >
                 <div className="min-h-0">
-                  <p className="max-w-3xl pb-6 text-sm leading-relaxed text-ink-soft">
+                  <p className="max-w-3xl pb-7 text-[0.8125rem] leading-[1.9] text-ink-soft">
                     {t(faq.answer)}
                   </p>
                 </div>

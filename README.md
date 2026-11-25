@@ -45,14 +45,32 @@ WhatsApp / Instagram DM by design.
 
 ## Deploying to Vercel
 
-1. Push this folder to a Git repository.
-2. Import the repo at [vercel.com/new](https://vercel.com/new) — the
-   framework preset is detected automatically (Next.js).
-3. No build-time environment variables are required.
-4. Update `metadataBase` in `src/app/layout.tsx` and the contact details in
-   `src/data/site.ts` to your production values.
+### Current deployment
 
-## Before launch checklist
+- **Production URL:** https://atelier-scent-umber.vercel.app
+- **Project:** `atelier-scent` (scope: `kayanangela-3134s-projects`)
+- Deployment protection is **disabled** — the site is publicly accessible.
+
+### Deploying an update
+
+With the GitHub remote connected (see below), every push to `main`
+triggers an automatic Vercel deployment. To deploy manually instead:
+
+```bash
+vercel --prod
+```
+
+### Connecting the GitHub remote
+
+The repository lives at `github.com/<owner>/atelier-scent`. To link it so
+Vercel builds from GitHub (preview deployments per PR, automatic prod
+deploys on merge):
+
+```bash
+vercel git connect https://github.com/<owner>/atelier-scent
+```
+
+### Before launch checklist
 
 - [ ] Replace placeholder WhatsApp number and Instagram handle in `src/data/site.ts`.
 - [ ] Add real product photography: drop files into `public/images/` and set the

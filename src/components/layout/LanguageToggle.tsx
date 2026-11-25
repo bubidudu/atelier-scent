@@ -9,7 +9,7 @@ export function LanguageToggle({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "inline-flex items-center rounded-full border border-line-strong p-0.5",
+        "inline-flex items-center rounded-[2px] border border-line-strong",
         className,
       )}
       role="group"
@@ -29,8 +29,8 @@ export function LanguageToggle({ className }: { className?: string }) {
             onClick={() => setLocale(option.id)}
             aria-pressed={isActive}
             className={cn(
-              "rounded-full px-3 py-1 text-[0.6875rem] tracking-[0.12em] transition-colors",
-              isActive ? "bg-ink text-paper" : "text-ink-faint hover:text-ink",
+              "px-2.5 py-1 text-[0.625rem] font-medium uppercase tracking-[0.12em] transition-colors",
+              isActive ? "bg-ink text-inverse" : "text-ink-faint hover:text-ink",
             )}
           >
             {option.label}

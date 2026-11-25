@@ -11,6 +11,11 @@ import { cn } from "@/lib/cn";
 
 type FormStatus = "idle" | "sent" | "error";
 
+const fieldClass =
+  "w-full rounded-[2px] border border-line bg-paper px-3 py-2.5 text-[0.8125rem] outline-none transition-colors focus:border-ink";
+
+const labelClass = "mb-1.5 block text-[0.625rem] font-medium uppercase tracking-[0.16em] text-ink-faint";
+
 export function CommunitySection() {
   const { t } = useLocale();
   const [status, setStatus] = useState<FormStatus>("idle");
@@ -18,7 +23,7 @@ export function CommunitySection() {
 
   return (
     <Section id="community">
-      <div className="grid gap-12 lg:grid-cols-[1fr_0.9fr] lg:gap-16">
+      <div className="grid gap-14 lg:grid-cols-[1fr_0.9fr] lg:gap-20">
         <div>
           <SectionHeading
             eyebrow={t(copy.community.eyebrow)}
@@ -33,21 +38,23 @@ export function CommunitySection() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 border border-line-strong px-5 py-2.5 text-sm text-ink transition-colors hover:border-ink"
+                className="inline-flex items-center gap-2.5 rounded-[3px] border border-ink px-6 py-3 text-[0.625rem] font-medium uppercase tracking-[0.16em] text-ink transition-colors hover:bg-ink hover:text-inverse"
               >
                 {social.label}
-                <span className="text-xs text-ink-faint">{social.handle}</span>
+                <span className="text-ink-faint">{social.handle}</span>
               </a>
             ))}
           </div>
 
-          <div className="mt-12">
+          <div className="mt-14">
             <p className="eyebrow">{t(copy.community.pillarsTitle)}</p>
             <ul className="mt-5 grid gap-px border border-line bg-line sm:grid-cols-2">
               {contentPillars.map((pillar) => (
-                <li key={pillar.id} className="bg-paper p-6">
-                  <h3 className="font-display text-lg">{t(pillar.label)}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+                <li key={pillar.id} className="bg-paper p-7">
+                  <h3 className="text-[0.6875rem] font-medium uppercase tracking-[0.14em]">
+                    {t(pillar.label)}
+                  </h3>
+                  <p className="mt-3 text-[0.8125rem] leading-[1.85] text-ink-soft">
                     {t(pillar.detail)}
                   </p>
                 </li>
@@ -56,40 +63,31 @@ export function CommunitySection() {
           </div>
         </div>
 
-        <div className="border border-line bg-paper-deep/40 p-7 sm:p-8">
-          <h3 className="font-display text-2xl">{t(copy.community.formTitle)}</h3>
-          <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+        <div className="border border-line bg-paper-deep/40 p-8">
+          <h3 className="font-display text-[1.25rem] uppercase tracking-[0.04em]">
+            {t(copy.community.formTitle)}
+          </h3>
+          <p className="mt-4 text-[0.8125rem] leading-[1.9] text-ink-soft">
             {t(copy.community.formIntro)}
           </p>
 
           <form
-            className="mt-7 space-y-4"
+            className="mt-8 space-y-5"
             onSubmit={(event) => {
               event.preventDefault();
               // Replace with a real endpoint (e.g. Resend / Formspree / your API route).
               setStatus("sent");
             }}
           >
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid gap-5 sm:grid-cols-2">
               <div>
-                <label
-                  htmlFor="community-name"
-                  className="mb-1.5 block text-xs tracking-[0.12em] text-ink-faint uppercase"
-                >
+                <label htmlFor="community-name" className={labelClass}>
                   {t(copy.community.formName)}
                 </label>
-                <input
-                  id="community-name"
-                  name="name"
-                  required
-                  className="w-full border border-line bg-paper px-3 py-2.5 text-sm outline-none focus:border-ink"
-                />
+                <input id="community-name" name="name" required className={fieldClass} />
               </div>
               <div>
-                <label
-                  htmlFor="community-email"
-                  className="mb-1.5 block text-xs tracking-[0.12em] text-ink-faint uppercase"
-                >
+                <label htmlFor="community-email" className={labelClass}>
                   {t(copy.community.formEmail)}
                 </label>
                 <input
@@ -97,16 +95,13 @@ export function CommunitySection() {
                   name="email"
                   type="email"
                   required
-                  className="w-full border border-line bg-paper px-3 py-2.5 text-sm outline-none focus:border-ink"
+                  className={fieldClass}
                 />
               </div>
             </div>
 
             <div>
-              <label
-                htmlFor="community-interest"
-                className="mb-1.5 block text-xs tracking-[0.12em] text-ink-faint uppercase"
-              >
+              <label htmlFor="community-interest" className={labelClass}>
                 {t(copy.community.formInterest)}
               </label>
               <select
@@ -114,7 +109,7 @@ export function CommunitySection() {
                 name="interest"
                 value={interest}
                 onChange={(event) => setInterest(event.target.value)}
-                className="w-full border border-line bg-paper px-3 py-2.5 text-sm outline-none focus:border-ink"
+                className={fieldClass}
               >
                 <option value="">{t(copy.community.formInterestPlaceholder)}</option>
                 {copy.community.interestOptions.map((option) => (
@@ -126,17 +121,14 @@ export function CommunitySection() {
             </div>
 
             <div>
-              <label
-                htmlFor="community-message"
-                className="mb-1.5 block text-xs tracking-[0.12em] text-ink-faint uppercase"
-                >
+              <label htmlFor="community-message" className={labelClass}>
                 {t(copy.community.formMessage)}
               </label>
               <textarea
                 id="community-message"
                 name="message"
                 rows={4}
-                className="w-full resize-none border border-line bg-paper px-3 py-2.5 text-sm outline-none focus:border-ink"
+                className={cn(fieldClass, "resize-none")}
                 placeholder={t(copy.community.formMessagePlaceholder)}
               />
             </div>
@@ -149,10 +141,10 @@ export function CommunitySection() {
               <p
                 role="status"
                 className={cn(
-                  "border px-3 py-2.5 text-sm",
+                  "border px-3.5 py-3 text-[0.8125rem]",
                   status === "sent"
-                    ? "border-sage/60 bg-sage/15 text-ink"
-                    : "border-clay/60 bg-clay/15 text-ink",
+                    ? "border-sage bg-sage/40 text-ink"
+                    : "border-clay bg-clay/40 text-ink",
                 )}
               >
                 {status === "sent"
@@ -161,7 +153,7 @@ export function CommunitySection() {
               </p>
             ) : null}
 
-            <p className="text-xs leading-relaxed text-ink-faint">
+            <p className="text-[0.6875rem] leading-[1.8] text-ink-faint">
               {t(copy.community.formConsent)}
             </p>
           </form>

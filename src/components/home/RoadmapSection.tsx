@@ -23,18 +23,22 @@ export function RoadmapSection() {
         intro={t(copy.roadmap.intro)}
       />
 
-      <div className="mt-12">
+      <div className="mt-14">
         <p className="eyebrow">{t(copy.roadmap.status.upcoming)}</p>
         <ul className="mt-5 divide-y divide-line border-y border-line">
           {upcoming.map((event) => (
             <li
               key={event.id}
-              className="grid gap-3 py-6 sm:grid-cols-[8rem_1fr_auto] sm:items-baseline sm:gap-8"
+              className="grid gap-3 py-7 sm:grid-cols-[7rem_1fr_auto] sm:items-baseline sm:gap-10"
             >
-              <p className="font-display text-lg text-ink-soft">{event.date}</p>
+              <p className="text-[0.75rem] uppercase tracking-[0.14em] text-ink-faint">
+                {event.date}
+              </p>
               <div>
-                <h3 className="font-display text-xl">{t(event.title)}</h3>
-                <p className="mt-1 text-sm text-ink-faint">{t(event.venue)}</p>
+                <h3 className="font-display text-[1.0625rem] uppercase tracking-[0.04em]">
+                  {t(event.title)}
+                </h3>
+                <p className="mt-1.5 text-[0.75rem] text-ink-faint">{t(event.venue)}</p>
               </div>
               <Badge tone={event.type === "workshop" ? "clay" : "sage"}>
                 {t(copy.roadmap.types[event.type])}
@@ -45,18 +49,22 @@ export function RoadmapSection() {
       </div>
 
       {past.length > 0 ? (
-        <div className="mt-12">
+        <div className="mt-14">
           <p className="eyebrow">{t(copy.roadmap.status.past)}</p>
           <ul className="mt-5 divide-y divide-line border-y border-line">
             {past.map((event) => (
               <li
                 key={event.id}
-                className="grid gap-3 py-6 opacity-60 sm:grid-cols-[8rem_1fr_auto] sm:items-baseline sm:gap-8"
+                className="grid gap-3 py-7 opacity-50 sm:grid-cols-[7rem_1fr_auto] sm:items-baseline sm:gap-10"
               >
-                <p className="font-display text-lg text-ink-soft">{event.date}</p>
+                <p className="text-[0.75rem] uppercase tracking-[0.14em] text-ink-faint">
+                  {event.date}
+                </p>
                 <div>
-                  <h3 className="font-display text-xl">{t(event.title)}</h3>
-                  <p className="mt-1 text-sm text-ink-faint">{t(event.venue)}</p>
+                  <h3 className="font-display text-[1.0625rem] uppercase tracking-[0.04em]">
+                    {t(event.title)}
+                  </h3>
+                  <p className="mt-1.5 text-[0.75rem] text-ink-faint">{t(event.venue)}</p>
                 </div>
                 <Badge tone="outline">{t(copy.roadmap.types[event.type])}</Badge>
               </li>

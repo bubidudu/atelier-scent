@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Jost } from "next/font/google";
 import { LocaleProvider } from "@/i18n/LocaleProvider";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
@@ -6,8 +7,16 @@ import { InquiryProvider } from "@/components/inquiry/InquiryProvider";
 import { InquiryModal } from "@/components/inquiry/InquiryModal";
 import "./globals.css";
 
+/** Jost is a geometric sans in the Futura lineage — the house type of the brand. */
+const jost = Jost({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  variable: "--font-jost",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://atelierscent.hk"),
+  metadataBase: new URL("https://atelier-scent-umber.vercel.app"),
   title: {
     default: "Atelier Scent — 香港手作香氛與精油工作室",
     template: "%s — Atelier Scent",
@@ -36,7 +45,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#faf7f2",
+  themeColor: "#f8f7f5",
   width: "device-width",
   initialScale: 1,
 };
@@ -45,13 +54,13 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="zh-HK" suppressHydrationWarning>
+    <html lang="zh-HK" suppressHydrationWarning className={jost.variable}>
       <body className="min-h-dvh">
         <LocaleProvider>
           <InquiryProvider>
             <a
               href="#main"
-              className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:border focus:border-ink focus:bg-paper focus:px-4 focus:py-2 focus:text-sm"
+              className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:border focus:border-ink focus:bg-paper focus:px-4 focus:py-2 focus:text-xs"
             >
               跳至主要內容 / Skip to content
             </a>
