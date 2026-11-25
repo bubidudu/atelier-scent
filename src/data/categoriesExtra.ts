@@ -87,12 +87,12 @@ export const extraCategories: ProductCategory[] = [
     id: "mini-gift-set",
     group: "ritual",
     label: { zhHK: "迷你禮盒", en: "Mini Gift Set" },
-    tagline: { zhHK: "三款小份，把香氣送給自己。", en: "Three small formats, given to yourself." },
+    tagline: { zhHK: "三款小份，桐木盒與風呂敷包好。", en: "Three small formats, wrapped in a paulownia box and furoshiki." },
   },
   {
     id: "packaging",
     group: "ritual",
-    label: { zhHK: "包裝袋 / 盒", en: "Packaging & Boxes" },
-    tagline: { zhHK: "可回收的紙盒與棉布袋。", en: "Recyclable boxes and cotton bags." },
+    label: { zhHK: "和風包裝 / 桐木盒", en: "Japanese Wrapping & Boxes" },
+    tagline: { zhHK: "桐木盒、越前和紙與風呂敷，讓包裹本身也成為一件日用之物。", en: "Paulownia boxes, Echizen washi, and furoshiki — packaging made to be kept." },
   },
 ];

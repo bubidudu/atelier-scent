@@ -118,6 +118,13 @@ export function ProductDetailDialog({
             </div>
 
             <div className="mt-8 border-t border-line pt-6">
+              <p className="eyebrow">{t(copy.featured.packaging)}</p>
+              <p className="mt-3 text-[0.8125rem] leading-[1.9] text-ink-soft">
+                {t(product.packaging)}
+              </p>
+            </div>
+
+            <div className="mt-8 border-t border-line pt-6">
               <p className="eyebrow">{t(copy.featured.usage)}</p>
               <p className="mt-3 text-[0.8125rem] leading-[1.9] text-ink-soft">
                 {t(product.usage)}

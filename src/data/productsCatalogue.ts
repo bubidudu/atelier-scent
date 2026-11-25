@@ -1,6 +1,7 @@
 import type { Product } from "./types";
 import { categoryDefaults } from "./categoryDefaults";
 import { moreCategoryDefaults } from "./categoryDefaultsMore";
+import { packagingByCategory } from "./packagingByCategory";
 
 /**
  * The full prototype catalogue. Entries inherit their safety notes and usage
@@ -393,7 +394,7 @@ const rows: Array<{
     category: "mini-gift-set",
     story: { zhHK: "三款小份，把香氣送給自己。", en: "Three small formats, given to yourself." },
     notes: [{ family: { zhHK: "前調", en: "Top" }, note: { zhHK: "佛手柑", en: "Bergamot" } }, { family: { zhHK: "中調", en: "Heart" }, note: { zhHK: "白茶", en: "White Tea" } }, { family: { zhHK: "後調", en: "Base" }, note: { zhHK: "雪松", en: "Cedarwood" } }],
-    ingredients: [{ name: { zhHK: "滾珠 · 蠟片 · 迷你蠟燭", en: "Roll-on, sachet, mini candle" }, role: { zhHK: "三款形態", en: "Three formats" } }, { name: { zhHK: "再生紙禮盒", en: "Recycled paper box" }, role: { zhHK: "包裝", en: "Packaging" } }],
+    ingredients: [{ name: { zhHK: "滾珠 · 蠟片 · 迷你蠟燭", en: "Roll-on, sachet, mini candle" }, role: { zhHK: "三款形態", en: "Three formats" } }, { name: { zhHK: "桐木禮盒 · 風呂敷", en: "Paulownia box, furoshiki" }, role: { zhHK: "包裝", en: "Packaging" } }],
     tags: ["allergen-declared"],
     size: "三件裝",
     price: "HK$ 468",
@@ -405,7 +406,7 @@ const rows: Array<{
     category: "mini-gift-set",
     story: { zhHK: "行李箱放得下的香氣。", en: "Scent that fits in a suitcase." },
     notes: [{ family: { zhHK: "前調", en: "Top" }, note: { zhHK: "葡萄柚", en: "Grapefruit" } }, { family: { zhHK: "中調", en: "Heart" }, note: { zhHK: "薄荷", en: "Peppermint" } }, { family: { zhHK: "後調", en: "Base" }, note: { zhHK: "白麝香", en: "White Musk" } }],
-    ingredients: [{ name: { zhHK: "迷你滾珠 · 車用香 · 蠟片", en: "Mini roll-on, car scent, sachet" }, role: { zhHK: "三款形態", en: "Three formats" } }, { name: { zhHK: "再生紙禮盒", en: "Recycled paper box" }, role: { zhHK: "包裝", en: "Packaging" } }],
+    ingredients: [{ name: { zhHK: "迷你滾珠 · 車用香 · 蠟片", en: "Mini roll-on, car scent, sachet" }, role: { zhHK: "三款形態", en: "Three formats" } }, { name: { zhHK: "桐木禮盒 · 風呂敷", en: "Paulownia box, furoshiki" }, role: { zhHK: "包裝", en: "Packaging" } }],
     tags: ["allergen-declared"],
     size: "三件裝",
     price: "HK$ 438",
@@ -413,11 +414,11 @@ const rows: Array<{
   },
   {
     id: "pack-box",
-    name: { zhHK: "回收紙盒", en: "Recycled Box" },
+    name: { zhHK: "桐木禮盒", en: "Paulownia Gift Box" },
     category: "packaging",
-    story: { zhHK: "可回收的紙盒，寄給你的香氣。", en: "A recyclable box for your scent." },
+    story: { zhHK: "桐木盒身，開合時有淡淡的木頭香。", en: "A paulownia box that smells faintly of wood as it opens." },
     notes: [{ family: { zhHK: "前調", en: "Top" }, note: { zhHK: "無香", en: "Unscented" } }, { family: { zhHK: "中調", en: "Heart" }, note: { zhHK: "無香", en: "Unscented" } }, { family: { zhHK: "後調", en: "Base" }, note: { zhHK: "無香", en: "Unscented" } }],
-    ingredients: [{ name: { zhHK: "再生紙板", en: "Recycled card" }, role: { zhHK: "包裝主體", en: "Box body" } }, { name: { zhHK: "大豆油墨", en: "Soy-based ink" }, role: { zhHK: "印刷", en: "Printing" } }],
+    ingredients: [{ name: { zhHK: "桐木", en: "Paulownia" }, role: { zhHK: "盒身", en: "Box body" } }, { name: { zhHK: "越前和紙", en: "Echizen washi" }, role: { zhHK: "內襯", en: "Lining" } }, { name: { zhHK: "水引", en: "Mizuhiki" }, role: { zhHK: "繫結", en: "Tie" } }],
     tags: ["pet-friendly"],
     size: "紙盒 / 棉布袋",
     price: "免費",
@@ -425,11 +426,11 @@ const rows: Array<{
   },
   {
     id: "pack-bag",
-    name: { zhHK: "棉布回收袋", en: "Cotton Return Bag" },
+    name: { zhHK: "風呂敷回收袋", en: "Furoshiki Return Bag" },
     category: "packaging",
-    story: { zhHK: "帶回空瓶的布袋。", en: "The bag you bring empty bottles back in." },
+    story: { zhHK: "一方和棉布，帶回空瓶的袋。", en: "One square of washed cotton — the bag that brings bottles back." },
     notes: [{ family: { zhHK: "前調", en: "Top" }, note: { zhHK: "無香", en: "Unscented" } }, { family: { zhHK: "中調", en: "Heart" }, note: { zhHK: "無香", en: "Unscented" } }, { family: { zhHK: "後調", en: "Base" }, note: { zhHK: "無香", en: "Unscented" } }],
-    ingredients: [{ name: { zhHK: "有機棉布", en: "Organic cotton" }, role: { zhHK: "袋身", en: "Bag body" } }, { name: { zhHK: "棉線束口", en: "Cotton drawstring" }, role: { zhHK: "收口", en: "Closure" } }],
+    ingredients: [{ name: { zhHK: "和棉布", en: "Washed cotton" }, role: { zhHK: "袋身", en: "Bag body" } }, { name: { zhHK: "棉線束口", en: "Cotton drawstring" }, role: { zhHK: "收口", en: "Closure" } }],
     tags: ["pet-friendly"],
     size: "紙盒 / 棉布袋",
     price: "免費",
@@ -439,7 +440,7 @@ const rows: Array<{
     id: "balm-honey-bergamot",
     name: { zhHK: "蜂蜜佛手柑護唇膏", en: "Honey Bergamot Balm" },
     category: "lip-balm",
-    story: { zhHK: "滋潤帶一點清 citrus。", en: "Conditioning, with a clean citrus note." },
+    story: { zhHK: "滋潤帶一點清新的柑橘調。", en: "Conditioning, with a clean citrus note." },
     notes: [{ family: { zhHK: "前調", en: "Top" }, note: { zhHK: "佛手柑", en: "Bergamot" } }, { family: { zhHK: "中調", en: "Heart" }, note: { zhHK: "洋甘菊", en: "Chamomile" } }, { family: { zhHK: "後調", en: "Base" }, note: { zhHK: "蜂蠟", en: "Beeswax" } }],
     ingredients: [{ name: { zhHK: "有機蜂蠟", en: "Organic beeswax" }, role: { zhHK: "封存基底", en: "Sealing base" } }, { name: { zhHK: "荷荷巴油", en: "Jojoba oil" }, role: { zhHK: "滋潤層", en: "Conditioning layer" } }],
     tags: ["allergen-declared"],
@@ -554,6 +555,7 @@ export const catalogueProducts: Product[] = rows.map((row) => {
     story: row.story,
     notes: row.notes,
     ingredients: row.ingredients,
+    packaging: packagingByCategory[row.category],
     safetyNotes: base?.safety ?? loc("", ""),
     usage: base?.usage ?? loc("", ""),
     tags: row.tags,

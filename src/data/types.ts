@@ -96,6 +96,8 @@ export interface Product {
   notes: ProductNote[];
   /** Key ingredients with their functional role. */
   ingredients: Array<{ name: Localized; role: Localized }>;
+  /** The vessel and wrapping this product arrives in — Japanese craft packaging. */
+  packaging: Localized;
   /** Safety guidance specific to this product. */
   safetyNotes: Localized;
   /** How to use. */

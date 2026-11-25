@@ -60,6 +60,12 @@ export function ProductCard({
           </div>
           <div className="flex gap-3">
             <dt className="w-16 shrink-0 uppercase tracking-[0.12em]">
+              {t(copy.featured.packaging)}
+            </dt>
+            <dd className="text-ink-soft">{t(product.packaging)}</dd>
+          </div>
+          <div className="flex gap-3">
+            <dt className="w-16 shrink-0 uppercase tracking-[0.12em]">
               {t(copy.featured.price)}
             </dt>
             <dd className="text-ink-soft">{product.price}</dd>

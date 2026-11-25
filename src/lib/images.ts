@@ -135,19 +135,19 @@ export const images: Record<string, ImageConfigEntry> = {
     ratio: "3/2",
   },
   "gift-trio": {
-    alt: { zhHK: "三款小禮盒產品示意圖", en: "Trio Gift Box product placeholder" },
+    alt: { zhHK: "三款小禮盒：桐木盒與風呂敷包裝示意圖", en: "Trio Gift Box in paulownia and furoshiki product placeholder" },
     ratio: "3/2",
   },
   "gift-travel": {
-    alt: { zhHK: "旅行小禮盒產品示意圖", en: "Travel Gift Box product placeholder" },
+    alt: { zhHK: "旅行小禮盒：桐木盒與風呂敷包裝示意圖", en: "Travel Gift Box in paulownia and furoshiki product placeholder" },
     ratio: "3/2",
   },
   "pack-box": {
-    alt: { zhHK: "回收紙盒產品示意圖", en: "Recycled Box product placeholder" },
+    alt: { zhHK: "桐木禮盒與越前和紙內襯產品示意圖", en: "Paulownia gift box with Echizen washi lining product placeholder" },
     ratio: "3/2",
   },
   "pack-bag": {
-    alt: { zhHK: "棉布回收袋產品示意圖", en: "Cotton Return Bag product placeholder" },
+    alt: { zhHK: "風呂敷棉布回收袋產品示意圖", en: "Furoshiki cotton return bag product placeholder" },
     ratio: "3/2",
   },
   "balm-honey-bergamot": {
@@ -217,6 +217,13 @@ export const images: Record<string, ImageConfigEntry> = {
   "solid-perfume-winter": {
     alt: { zhHK: "冬季固體香水：雪松夜產品示意圖", en: "Solid Perfume — Cedar Night product placeholder" },
     ratio: "4/5",
+  },
+  "packaging-craft": {
+    alt: {
+      zhHK: "日式包材工作台：桐木盒、越前和紙標籤、水引繩與風呂敷布",
+      en: "Japanese packaging bench with a paulownia box, Echizen washi labels, mizuhiki cord and folded furoshiki",
+    },
+    ratio: "3/2",
   },
   "hero-atelier": {
     alt: {

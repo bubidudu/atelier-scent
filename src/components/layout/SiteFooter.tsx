@@ -14,6 +14,7 @@ export function SiteFooter() {
     { href: "/about", label: t(copy.nav.about) },
     { href: "/#safety", label: t(copy.nav.safety) },
     { href: "/#sustainability", label: t(copy.nav.sustainability) },
+    { href: "/#packaging", label: t(copy.nav.packaging) },
     { href: "/#roadmap", label: t(copy.nav.roadmap) },
     { href: "/#community", label: t(copy.nav.community) },
   ];

@@ -92,8 +92,8 @@ export const moreCategoryDefaults: CategoryDefaults[] = [
       en: "Follow the usage and safety directions printed on each individual product.",
     },
     usage: {
-      zhHK: "禮盒可直接贈送。每件產品均可單獨回收到工作室。",
-      en: "The set is ready to gift. Every piece can be returned to the studio on its own.",
+      zhHK: "禮盒以桐木盒與風呂敷包好，可直接贈送。每件產品均可單獨回收到工作室。",
+      en: "The set arrives in a paulownia box wrapped in furoshiki, ready to gift. Every piece can be returned to the studio on its own.",
     },
     size: "三件裝",
     price: "HK$ 468",
@@ -102,8 +102,8 @@ export const moreCategoryDefaults: CategoryDefaults[] = [
   {
     category: "packaging",
     safety: {
-      zhHK: "包裝不含任何香氛成分。請以紙類回收，棉布袋可重複使用。",
-      en: "Packaging contains no fragrance. Recycle as paper; the cotton bag is reusable.",
+      zhHK: "包裝不含任何香氛成分。桐木盒與和紙可回收，風呂敷可重複使用。",
+      en: "Packaging contains no fragrance. Paulownia and washi are recyclable; the furoshiki is reusable.",
     },
     usage: {
       zhHK: "空盒與空袋可於任何市集攤位免費回收。",

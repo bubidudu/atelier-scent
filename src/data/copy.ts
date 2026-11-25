@@ -18,6 +18,7 @@ export const copy = {
     about: { zhHK: "理念與安全", en: "About & Safety" },
     safety: { zhHK: "成分安全", en: "Safety" },
     sustainability: { zhHK: "永續回收", en: "Sustainability" },
+    packaging: { zhHK: "和風包材", en: "Packaging" },
     roadmap: { zhHK: "市集與工作坊", en: "Markets & Workshops" },
     community: { zhHK: "社群", en: "Community" },
     menu: { zhHK: "選單", en: "Menu" },
@@ -40,6 +41,7 @@ export const copy = {
       { value: "51", label: { zhHK: "原型配方", en: "Prototype blends" } },
       { value: "100%", label: { zhHK: "成分全標示", en: "Full ingredient labels" } },
       { value: "0", label: { zhHK: "塑膠包裝", en: "Plastic packaging" } },
+      { value: "和", label: { zhHK: "日式和風包材", en: "Japanese wrapping" } },
     ],
     heroImageAlt: {
       zhHK: "Atelier Scent 手作香氛工作桌：玻璃瓶、香精油與未點燃的蠟燭",
@@ -59,6 +61,7 @@ export const copy = {
     notes: { zhHK: "香調", en: "Notes" },
     safety: { zhHK: "安全提示", en: "Safety" },
     ingredients: { zhHK: "主要成分", en: "Key ingredients" },
+    packaging: { zhHK: "和風包材", en: "Japanese Packaging" },
     usage: { zhHK: "使用方式", en: "How to use" },
     story: { zhHK: "香氣故事", en: "The story" },
     status: {
@@ -126,6 +129,15 @@ export const copy = {
       zhHK: "標示為「適用」的配方，仍需要依產品說明在適當場合使用；如你或家人有哮喘、過敏、孕期或長期健康狀況，請先諮詢醫護人員。",
       en: "A 'friendly' badge still requires you to use the product as instructed. If you or your family have asthma, allergies, are pregnant, or manage a long-term condition, please consult a healthcare professional first.",
     },
+  },
+  packaging: {
+    eyebrow: { zhHK: "和風包材", en: "Japanese Craft Packaging" },
+    title: { zhHK: "包裝本身，也是一件日用之物。", en: "The packaging is meant to be used, too." },
+    intro: {
+      zhHK: "每一件產品都以桐木盒、越前和紙、水引與風呂敷包好。我們不追求多餘的裝飾，只希望拆開包裹的時候，它值得被留下。",
+      en: "Every piece arrives in paulownia, Echizen washi, mizuhiki cord, and furoshiki. We are not after decoration — we want the unwrapping to be worth keeping.",
+    },
+    note: { zhHK: "無塑膠", en: "No Plastic" },
   },
   sustainability: {
     eyebrow: { zhHK: "小批量 · 零廢棄", en: "Small-Batch · Zero Waste" },

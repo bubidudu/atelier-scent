@@ -24,6 +24,10 @@ export const products: Product[] = [
       { name: { zhHK: "大豆蠟", en: "Soy wax" }, role: { zhHK: "100% 植物性基底", en: "100% plant-based base" } },
       { name: { zhHK: "棉芯", en: "Cotton wick" }, role: { zhHK: "無鉛、無金屬", en: "Lead-free, metal-free" } },
     ],
+    packaging: {
+      zhHK: "桐木禮盒 · 越前和紙杯套 · 水引繫結",
+      en: "Paulownia box, Echizen washi sleeve, mizuhiki tie",
+    },
     safetyNotes: {
       zhHK: "請於通風處使用；點燃期間請勿離開，並置於穩固耐熱表面。孕婦及小童適用（建議於嬰兒不在房間時點燃）。貓狗請離開房間後再點燃。",
       en: "Use in a ventilated room. Never leave a burning candle unattended, and place it on a stable, heat-resistant surface. Suitable during pregnancy and around children (light it only when the baby is not in the room). Please keep cats and dogs out of the room while burning.",
@@ -57,6 +61,10 @@ export const products: Product[] = [
       { name: { zhHK: "洋甘菊精油", en: "Chamomile essential oil" }, role: { zhHK: "舒緩香調", en: "Calming middle note" } },
       { name: { zhHK: "大豆蠟與棉芯", en: "Soy wax & cotton wick" }, role: { zhHK: "植物性基底", en: "Plant-based base" } },
     ],
+    packaging: {
+      zhHK: "桐木禮盒 · 越前和紙杯套 · 水引繫結",
+      en: "Paulownia box, Echizen washi sleeve, mizuhiki tie",
+    },
     safetyNotes: {
       zhHK: "蠟燭必須有人看管。孕婦及小童適用；貓狗請於熄燭並通風後返回房間。",
       en: "Never leave a burning candle unattended. Suitable during pregnancy and around children; return cats and dogs only once the candle is extinguished and the room is aired.",
@@ -89,6 +97,10 @@ export const products: Product[] = [
       { name: { zhHK: "無花果香基", en: "Fig accord" }, role: { zhHK: "果香主角", en: "Fruity character" } },
       { name: { zhHK: "大豆蠟與天然色素", en: "Soy wax & natural pigment" }, role: { zhHK: "可溶配方", en: "Soluble formula" } },
     ],
+    packaging: {
+      zhHK: "越前和紙小袋 · 水引封口",
+      en: "Echizen washi pouch, mizuhiki seal",
+    },
     safetyNotes: {
       zhHK: "請置於兒童及寵物接觸不到的位置。蠟片不可食用；接觸皮膚後請以清水清洗。",
       en: "Keep out of reach of children and pets. Not for consumption; wash with water if it contacts skin.",
@@ -122,6 +134,10 @@ export const products: Product[] = [
       { name: { zhHK: "甜橙精油", en: "Sweet orange oil" }, role: { zhHK: "提亮前調", en: "Bright opening" } },
       { name: { zhHK: "荷荷巴油", en: "Jojoba oil" }, role: { zhHK: "植物性稀釋基底", en: "Plant-based carrier" } },
     ],
+    packaging: {
+      zhHK: "和紙小盒 · 桐木盒身 · 水引繫結",
+      en: "Washi case, paulownia body, mizuhiki tie",
+    },
     safetyNotes: {
       zhHK: "外用。請先於手腕內側小範圍測試 24 小時。孕期、哺乳期或使用抗凝血藥物者請先諮詢醫護人員。",
       en: "For external use only. Patch test on the inner wrist for 24 hours first. Consult a healthcare professional if pregnant, breastfeeding, or taking blood-thinning medication.",
@@ -154,6 +170,10 @@ export const products: Product[] = [
       { name: { zhHK: "真正薰衣草精油", en: "True lavender oil" }, role: { zhHK: "舒眠香調", en: "Sleep-support note" } },
       { name: { zhHK: "荷荷巴油", en: "Jojoba oil" }, role: { zhHK: "植物性稀釋基底", en: "Plant-based carrier" } },
     ],
+    packaging: {
+      zhHK: "和紙小盒 · 桐木盒身 · 水引繫結",
+      en: "Washi case, paulownia body, mizuhiki tie",
+    },
     safetyNotes: {
       zhHK: "外用，避開眼周。貓狗請勿接觸——貓科代謝缺乏葡萄糖醛酸轉移酶，薰衣草類成分需特別留意。",
       en: "External use, avoid the eye area. Keep away from cats and dogs — cats lack glucuronyl transferase, so lavender-family compounds need particular care.",
@@ -186,6 +206,10 @@ export const products: Product[] = [
       { name: { zhHK: "白檀精油", en: "Sandalwood oil" }, role: { zhHK: "柔滑底調", en: "Smooth base note" } },
       { name: { zhHK: "植物性酒精基底的溫和配方", en: "Gentle plant-based alcohol base" }, role: { zhHK: "霧化媒介", en: "Spray medium" } },
     ],
+    packaging: {
+      zhHK: "和紙盒 · 玻璃瓶 · 越前和紙標籤",
+      en: "Washi box, glass bottle, Echizen washi label",
+    },
     safetyNotes: {
       zhHK: "請勿朝臉部噴灑。使用後保持通風。孕婦與小童適用；貓狗請待空間通風後再返回。",
       en: "Do not spray toward the face. Keep the room ventilated after use. Suitable during pregnancy and around children; let the room air before pets return.",
@@ -219,6 +243,10 @@ export const products: Product[] = [
       { name: { zhHK: "甜杏仁油", en: "Sweet almond oil" }, role: { zhHK: "柔滑延伸", en: "Slip and softness" } },
       { name: { zhHK: "薄荷與迷迭香精油", en: "Peppermint & rosemary oils" }, role: { zhHK: "清涼感", en: "Cooling effect" } },
     ],
+    packaging: {
+      zhHK: "和紙盒 · 琥珀玻璃瓶 · 越前和紙標籤",
+      en: "Washi box, amber glass bottle, Echizen washi label",
+    },
     safetyNotes: {
       zhHK: "僅供身體外部使用，避免眼睛、黏膜與傷口。孕婦請避免使用迷迭香與薄荷；寵物請勿舔食殘留於毛髮上的精油。",
       en: "External body use only — avoid eyes, mucous membranes, and broken skin. Avoid rosemary and mint during pregnancy. Keep oils from being licked by pets.",
@@ -251,6 +279,10 @@ export const products: Product[] = [
       { name: { zhHK: "乳木果脂", en: "Shea butter" }, role: { zhHK: "膏體基底", en: "Balm base" } },
       { name: { zhHK: "雪松與杜松精油", en: "Cedar & juniper oils" }, role: { zhHK: "木質香調", en: "Woody character" } },
     ],
+    packaging: {
+      zhHK: "和紙盒 · 錫盒膏體 · 桐木盒蓋",
+      en: "Washi box, tin balm case, paulownia lid",
+    },
     safetyNotes: {
       zhHK: "外用。請先小範圍測試；含天然致敏原。孕婦與小童適用；貓狗請勿接觸。",
       en: "For external use. Patch test first; contains natural allergens. Suitable during pregnancy and around children; keep away from cats and dogs.",

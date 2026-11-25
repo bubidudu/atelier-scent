@@ -41,7 +41,7 @@ export function Hero() {
             </Button>
           </div>
 
-          <dl className="mt-14 grid max-w-md grid-cols-3 gap-6 border-t border-line pt-7">
+          <dl className="mt-14 grid max-w-xl grid-cols-2 gap-6 border-t border-line pt-7 sm:grid-cols-4">
             {copy.hero.heroStats.map((stat) => (
               <div key={stat.label.en}>
                 <dt className="font-display text-[1.75rem] leading-none">{stat.value}</dt>

@@ -12,6 +12,7 @@ const navLinks = [
   { href: "/about", key: "about" as const },
   { href: "/#safety", key: "safety" as const },
   { href: "/#sustainability", key: "sustainability" as const },
+  { href: "/#packaging", key: "packaging" as const },
   { href: "/#roadmap", key: "roadmap" as const },
   { href: "/#community", key: "community" as const },
 ];
