@@ -14,61 +14,209 @@ export interface ImageConfigEntry {
  * to a file in /public and the placeholder is replaced automatically.
  */
 export const images: Record<string, ImageConfigEntry> = {
+  "candle-citrus-pop": {
+    alt: { zhHK: "柑橘氣泡產品示意圖", en: "Citrus Pop product placeholder" },
+    ratio: "4/5",
+  },
+  "candle-berry-fig": {
+    alt: { zhHK: "野莓無花果產品示意圖", en: "Berry Fig product placeholder" },
+    ratio: "4/5",
+  },
+  "candle-jasmine-night": {
+    alt: { zhHK: "茉莉夜產品示意圖", en: "Jasmine Night product placeholder" },
+    ratio: "4/5",
+  },
+  "candle-rose-peony": {
+    alt: { zhHK: "玫瑰芍藥產品示意圖", en: "Rose & Peony product placeholder" },
+    ratio: "4/5",
+  },
+  "candle-osmanthus-wax": {
+    alt: { zhHK: "桂花香薰蠟片產品示意圖", en: "Osmanthus Sachet product placeholder" },
+    ratio: "4/5",
+  },
+  "reed-hinoki": {
+    alt: { zhHK: "檜木藤枝產品示意圖", en: "Hinoki Reeds product placeholder" },
+    ratio: "4/5",
+  },
+  "reed-citrus": {
+    alt: { zhHK: "柑橘藤枝產品示意圖", en: "Citrus Reeds product placeholder" },
+    ratio: "4/5",
+  },
+  "reed-cedar": {
+    alt: { zhHK: "雪松藤枝產品示意圖", en: "Cedar Reeds product placeholder" },
+    ratio: "4/5",
+  },
+  "stone-linen": {
+    alt: { zhHK: "亞麻石膏產品示意圖", en: "Linen Plaster product placeholder" },
+    ratio: "4/5",
+  },
+  "wood-hinoki": {
+    alt: { zhHK: "檜木香片產品示意圖", en: "Hinoki Wood product placeholder" },
+    ratio: "4/5",
+  },
+  "wood-osmanthus": {
+    alt: { zhHK: "桂花香片產品示意圖", en: "Osmanthus Wood product placeholder" },
+    ratio: "4/5",
+  },
+  "bamboo-linen": {
+    alt: { zhHK: "亞麻竹枝產品示意圖", en: "Linen Bamboo product placeholder" },
+    ratio: "4/5",
+  },
+  "bamboo-cedar": {
+    alt: { zhHK: "雪松竹枝產品示意圖", en: "Cedar Bamboo product placeholder" },
+    ratio: "4/5",
+  },
+  "car-tea": {
+    alt: { zhHK: "白茶車香產品示意圖", en: "White Tea Car product placeholder" },
+    ratio: "4/5",
+  },
+  "car-cedar": {
+    alt: { zhHK: "雪松車香產品示意圖", en: "Cedar Car product placeholder" },
+    ratio: "4/5",
+  },
+  "clean-citrus": {
+    alt: { zhHK: "柑橘清潔噴霧產品示意圖", en: "Citrus Cleaner product placeholder" },
+    ratio: "4/5",
+  },
+  "clean-sage": {
+    alt: { zhHK: "迷迭香清潔噴霧產品示意圖", en: "Rosemary Cleaner product placeholder" },
+    ratio: "4/5",
+  },
+  "mould-tea": {
+    alt: { zhHK: "茶樹防霉噴霧產品示意圖", en: "Tea Tree Anti-Mould product placeholder" },
+    ratio: "4/5",
+  },
+  "mould-citrus": {
+    alt: { zhHK: "柑橘防霉噴霧產品示意圖", en: "Citrus Anti-Mould product placeholder" },
+    ratio: "4/5",
+  },
+  "deodorise-cedar": {
+    alt: { zhHK: "雪松防臭噴霧產品示意圖", en: "Cedar Deodoriser product placeholder" },
+    ratio: "4/5",
+  },
+  "wish-new-home": {
+    alt: { zhHK: "新居願望產品示意圖", en: "New Home Wish product placeholder" },
+    ratio: "4/5",
+  },
+  "wish-calm-water": {
+    alt: { zhHK: "靜心泉水產品示意圖", en: "Calm Water product placeholder" },
+    ratio: "4/5",
+  },
+  "herbal-lavender": {
+    alt: { zhHK: "薰衣草香囊產品示意圖", en: "Lavender Sachet product placeholder" },
+    ratio: "4/5",
+  },
+  "herbal-spice": {
+    alt: { zhHK: "香料草囊產品示意圖", en: "Spice Sachet product placeholder" },
+    ratio: "4/5",
+  },
+  "incense-hinoki": {
+    alt: { zhHK: "檜木線香產品示意圖", en: "Hinoki Incense product placeholder" },
+    ratio: "4/5",
+  },
+  "incense-osmanthus": {
+    alt: { zhHK: "桂花塔香產品示意圖", en: "Osmanthus Cones product placeholder" },
+    ratio: "4/5",
+  },
+  "incense-moss": {
+    alt: { zhHK: "雨林盤香產品示意圖", en: "Rainforest Coil product placeholder" },
+    ratio: "4/5",
+  },
+  "incense-bamboo": {
+    alt: { zhHK: "竹韻香產品示意圖", en: "Bamboo Note product placeholder" },
+    ratio: "4/5",
+  },
+  "kit-first-blend": {
+    alt: { zhHK: "第一次調香套裝產品示意圖", en: "First Blend Kit product placeholder" },
+    ratio: "3/2",
+  },
+  "kit-evening": {
+    alt: { zhHK: "夜晚調香套裝產品示意圖", en: "Evening Kit product placeholder" },
+    ratio: "3/2",
+  },
+  "gift-trio": {
+    alt: { zhHK: "三款小禮盒產品示意圖", en: "Trio Gift Box product placeholder" },
+    ratio: "3/2",
+  },
+  "gift-travel": {
+    alt: { zhHK: "旅行小禮盒產品示意圖", en: "Travel Gift Box product placeholder" },
+    ratio: "3/2",
+  },
+  "pack-box": {
+    alt: { zhHK: "回收紙盒產品示意圖", en: "Recycled Box product placeholder" },
+    ratio: "3/2",
+  },
+  "pack-bag": {
+    alt: { zhHK: "棉布回收袋產品示意圖", en: "Cotton Return Bag product placeholder" },
+    ratio: "3/2",
+  },
+  "balm-honey-bergamot": {
+    alt: { zhHK: "蜂蜜佛手柑護唇膏產品示意圖", en: "Honey Bergamot Balm product placeholder" },
+    ratio: "1/1",
+  },
+  "balm-tea-mint": {
+    alt: { zhHK: "茶樹薄荷護唇膏產品示意圖", en: "Tea & Mint Balm product placeholder" },
+    ratio: "1/1",
+  },
+  "repellent-citronella": {
+    alt: { zhHK: "香茅驅蚊噴霧產品示意圖", en: "Citronella Repellent product placeholder" },
+    ratio: "4/5",
+  },
+  "repellent-citrus": {
+    alt: { zhHK: "柑橘驅蟲噴霧產品示意圖", en: "Citrus Repellent product placeholder" },
+    ratio: "4/5",
+  },
+  "oil-body-calm": {
+    alt: { zhHK: "舒緩身體油產品示意圖", en: "Calm Body Oil product placeholder" },
+    ratio: "4/5",
+  },
+  "oil-leg-warmth": {
+    alt: { zhHK: "腿部暖身油產品示意圖", en: "Warm Leg Oil product placeholder" },
+    ratio: "4/5",
+  },
+  "mist-mint-coast": {
+    alt: { zhHK: "薄荷海岸產品示意圖", en: "Mint Coast product placeholder" },
+    ratio: "4/5",
+  },
+  "perfume-white-tea": {
+    alt: { zhHK: "白茶淡香水產品示意圖", en: "White Tea EDP product placeholder" },
+    ratio: "4/5",
+  },
+  "perfume-amber-rain": {
+    alt: { zhHK: "琥珀雨夜產品示意圖", en: "Amber Rain product placeholder" },
+    ratio: "4/5",
+  },
   "candle-hinoki-rain": {
-    alt: {
-      zhHK: "檜木雨後香氛蠟燭，玻璃杯中的米白大豆蠟，旁放著檜木枝與佛手柑",
-      en: "Hinoki After Rain scented candle in a clear glass jar, ivory soy wax beside a hinoki sprig and bergamot",
-    },
+    alt: { zhHK: "檜木雨後產品示意圖", en: "Hinoki After Rain product placeholder" },
     ratio: "4/5",
   },
   "candle-white-tea": {
-    alt: {
-      zhHK: "白茶日光香氛蠟燭，米白蠟面微微凹陷，旁邊是一杯白茶與亞麻布",
-      en: "White Tea Daylight candle with softly pooled ivory wax, a cup of white tea and folded linen beside it",
-    },
+    alt: { zhHK: "白茶日光產品示意圖", en: "White Tea Daylight product placeholder" },
     ratio: "4/5",
   },
   "sachet-fig-cotton": {
-    alt: {
-      zhHK: "無花果棉語香薰蠟片，圓形米色蠟片以麻繩繫著，掛在衣櫃掛鈎上",
-      en: "Fig & Cotton wax sachet, a round cream disc tied with twine, hanging from a wardrobe hook",
-    },
+    alt: { zhHK: "無花果棉語產品示意圖", en: "Fig & Cotton product placeholder" },
     ratio: "1/1",
   },
   "rollon-grounding": {
-    alt: {
-      zhHK: "沉靜滾珠精油，深琥珀色小玻璃瓶與黃銅滾珠蓋，放在石板上",
-      en: "Grounding Roll-On bottle, a small amber glass vial with a brass roller, resting on a stone slab",
-    },
+    alt: { zhHK: "沉靜滾珠產品示意圖", en: "Grounding Roll-On product placeholder" },
     ratio: "4/5",
   },
   "rollon-sleep-lavender": {
-    alt: {
-      zhHK: "晚安滾珠精油，淡紫色標籤的小瓶，旁放一束乾燥薰衣草",
-      en: "Goodnight Roll-On bottle with a pale lavender label, a bunch of dried lavender beside it",
-    },
+    alt: { zhHK: "晚安滾珠產品示意圖", en: "Goodnight Roll-On product placeholder" },
     ratio: "4/5",
   },
   "spray-linen-room": {
-    alt: {
-      zhHK: "亞麻房間空間噴霧，霧面玻璃噴瓶與疊好的白色亞麻枕頭",
-      en: "Linen Room spray in a frosted glass bottle beside neatly folded white linen pillows",
-    },
+    alt: { zhHK: "亞麻房間產品示意圖", en: "Linen Room product placeholder" },
     ratio: "4/5",
   },
   "massage-shoulder": {
-    alt: {
-      zhHK: "肩頸放鬆油，深色琥珀瓶身與淺色按摩油，倒在手掌中的按摩油滴",
-      en: "Shoulder Release Oil in a dark amber bottle, with drops of pale oil shown in an open palm",
-    },
+    alt: { zhHK: "肩頸放鬆油產品示意圖", en: "Shoulder Release Oil product placeholder" },
     ratio: "4/5",
   },
   "solid-perfume-winter": {
-    alt: {
-      zhHK: "雪松夜固體香水膏，銀色圓形小盒打開，露出乳木果脂膏體與木質小片",
-      en: "Cedar Night solid perfume balm in an open silver tin, showing shea balm and a small cedar shaving",
-    },
-    ratio: "1/1",
+    alt: { zhHK: "冬季固體香水：雪松夜產品示意圖", en: "Solid Perfume — Cedar Night product placeholder" },
+    ratio: "4/5",
   },
   "hero-atelier": {
     alt: {

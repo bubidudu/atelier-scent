@@ -1,4 +1,5 @@
 import type { Product } from "./types";
+import { catalogueProducts } from "./productsCatalogue";
 
 /**
  * Prototype catalogue. Add or edit items freely — the UI is driven entirely
@@ -267,6 +268,18 @@ export const products: Product[] = [
   },
 ];
 
+/**
+ * The original flagship prototypes, kept as the editorial anchor of the
+ * catalogue. Everything else in the range lives in `productsCatalogue.ts`.
+ */
+export const flagshipProducts: Product[] = products;
+
+/**
+ * The complete range: the original flagship prototypes followed by the wider
+ * catalogue of forms. Ordering here is what the catalogue grid renders.
+ */
+export const allProducts: Product[] = [...products, ...catalogueProducts];
+
 export const productMap = Object.fromEntries(
-  products.map((product) => [product.id, product]),
-) as Record<Product["id"], Product>;
+  allProducts.map((product) => [product.id, product]),
+) as Record<string, Product>;

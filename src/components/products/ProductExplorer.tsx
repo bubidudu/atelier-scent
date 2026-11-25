@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { copy } from "@/data/copy";
-import { products } from "@/data/products";
+import { allProducts } from "@/data/products";
 import { productCategories } from "@/data/categories";
 import { safetyTags } from "@/data/safety";
 import type { Product, ProductCategoryId, SafetyTagId } from "@/data/types";
@@ -21,8 +21,8 @@ export function ProductExplorer() {
   const [active, setActive] = useState<Product | null>(null);
 
   const filtered = useMemo(() => {
-    if (selected === "all") return products;
-    return products.filter((product) => {
+    if (selected === "all") return allProducts;
+    return allProducts.filter((product) => {
       if (product.category === selected) return true;
       return product.tags.includes(selected as SafetyTagId);
     });

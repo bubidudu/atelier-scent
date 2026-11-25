@@ -33,6 +33,22 @@ export const safetyTags: SafetyTag[] = [
       en: "Every natural allergen (citrus, citral, and more) is listed in full so you can decide for yourself.",
     },
   },
+  {
+    id: "pregnancy-avoid",
+    label: { zhHK: "孕期請避免", en: "Avoid During Pregnancy" },
+    description: {
+      zhHK: "含有孕期建議避免的成分（如薄荷、迷迭香、艾草），瓶身會標示具體原因。",
+      en: "Contains ingredients commonly advised against in pregnancy (mint, rosemary, mugwort). The bottle states the specific reason.",
+    },
+  },
+  {
+    id: "pet-caution",
+    label: { zhHK: "寵物需留意", en: "Pet Caution" },
+    description: {
+      zhHK: "貓狗代謝精油的方式與人不同，使用前請先閱讀瓶身指引。",
+      en: "Cats and dogs metabolise essential oils differently from humans — read the bottle guidance first.",
+    },
+  },
 ];
 
 export const safetyTagMap = Object.fromEntries(

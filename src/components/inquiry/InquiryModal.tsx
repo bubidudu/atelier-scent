@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useInquiry } from "./InquiryProvider";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { copy } from "@/data/copy";
-import { products } from "@/data/products";
+import { allProducts } from "@/data/products";
 import { instagramLink, siteConfig, whatsappLink } from "@/data/site";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
@@ -60,7 +60,7 @@ function InquiryForm({
   const [status, setStatus] = useState<"idle" | "sent" | "error">("idle");
 
   const selectedProduct = useMemo(
-    () => products.find((product) => product.id === selected),
+    () => allProducts.find((product) => product.id === selected),
     [selected],
   );
 
@@ -104,7 +104,7 @@ function InquiryForm({
             className={fieldClass}
           >
             <option value="">{t(copy.inquiry.productPlaceholder)}</option>
-            {products.map((product) => (
+            {allProducts.map((product) => (
               <option key={product.id} value={product.id}>
                 {t(product.name)}
               </option>

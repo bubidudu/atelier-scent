@@ -15,27 +15,61 @@ export const LOCALES: readonly Locale[] = ["zh-HK", "en"] as const;
 
 export const DEFAULT_LOCALE: Locale = "zh-HK";
 
-/** Product category ids. Extensible: add a new id and the UI updates automatically. */
+/**
+ * Product category ids. Extensible: add a new id and the UI updates automatically.
+ */
 export type ProductCategoryId =
   | "candle"
   | "wax-sachet"
   | "roll-on"
   | "room-spray"
   | "massage-oil"
-  | "solid-perfume";
+  | "solid-perfume"
+  | "perfume"
+  | "body-mist"
+  | "lip-balm"
+  | "insect-repellent"
+  | "reed-diffuser"
+  | "stone-diffuser"
+  | "wood-diffuser"
+  | "bamboo-diffuser"
+  | "wish-charm"
+  | "herbal-sachet"
+  | "incense"
+  | "car-fragrance"
+  | "household-cleaner"
+  | "anti-mould"
+  | "deodoriser"
+  | "diy-kit"
+  | "mini-gift-set"
+  | "packaging";
+
+/**
+ * Broad families used to group the category filter in the catalogue.
+ */
+export type CategoryGroupId = "personal" | "home" | "ritual";
 
 /** Suitability / safety tags. Used both as product badges and as catalog filters. */
 export type SafetyTagId =
   | "pregnancy-child-friendly"
   | "pet-friendly"
   | "sensitive-skin"
-  | "allergen-declared";
+  | "allergen-declared"
+  | "pregnancy-avoid"
+  | "pet-caution";
 
 export interface ProductCategory {
   id: ProductCategoryId;
   label: Localized;
   /** Short one-line positioning statement shown under the category title. */
   tagline: Localized;
+  /** Which filter group this category belongs to. */
+  group: CategoryGroupId;
+}
+
+export interface CategoryGroup {
+  id: CategoryGroupId;
+  label: Localized;
 }
 
 export interface SafetyTag {

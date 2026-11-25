@@ -37,7 +37,7 @@ export const copy = {
     ctaPrimary: { zhHK: "瀏覽香氛指南", en: "Explore the Scent Guide" },
     ctaSecondary: { zhHK: "預留／查詢", en: "Request or Reserve" },
     heroStats: [
-      { value: "8", label: { zhHK: "原型配方", en: "Prototype blends" } },
+      { value: "51", label: { zhHK: "原型配方", en: "Prototype blends" } },
       { value: "100%", label: { zhHK: "成分全標示", en: "Full ingredient labels" } },
       { value: "0", label: { zhHK: "塑膠包裝", en: "Plastic packaging" } },
     ],
@@ -48,12 +48,11 @@ export const copy = {
   },
   featured: {
     eyebrow: { zhHK: "系列一覽", en: "The Collection" },
-    title: { zhHK: "六種形態，一套安心的香氣語言。", en: "Six forms, one reassuring vocabulary of scent." },
+    title: { zhHK: "二十五種形態，一套安心的香氣語言。", en: "Twenty-five forms, one reassuring vocabulary of scent." },
     intro: {
       zhHK: "從房間到貼身，每一種形態都對應一個真實的生活場景。以下為我們的原型配方，部分將陸續開放預留。",
       en: "From a room to the skin, each form answers a real moment in daily life. Below are our prototype blends — some are open for reservation as we release them.",
-    },
-    viewAll: { zhHK: "查看全部香氛", en: "View all scents" },
+    },    viewAll: { zhHK: "查看全部香氛", en: "View all scents" },
     details: { zhHK: "查看詳情", en: "View details" },
     size: { zhHK: "規格", en: "Size" },
     price: { zhHK: "參考價", en: "Indicative price" },
